@@ -1,0 +1,34 @@
+{
+  "users":[
+      {
+        "id": 1,
+        "name": "Amber Heard",
+        "email": "amber@example.com",
+        "number": "987-654-3211"
+      },
+      {
+        "id": 2,
+        "name": "Jane Doe",
+        "email": "jane@example.com",
+        "number": "987-654-3212"
+      },
+      {
+        "id": 3,
+        "name": "Jhon Smith",
+        "email": "jhon@example.com",
+        "number": "987-654-3213"
+      },
+      {
+        "id": 4,
+        "name": "Stacy Cruz",
+        "email": "stacy@example.com",
+        "number": "987-654-3214"
+      },
+      {
+        "id": 5,
+        "name": "Leah Goti",
+        "email": "leah@example.com",
+        "number": "987-654-3215"
+      }
+    ]
+}

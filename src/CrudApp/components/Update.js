@@ -1,9 +1,10 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import loader from "../../Assets/loader.gif";
+import loader from "../../assets/images/loader.gif";
 
 const Update = () => {
+  
   const [id, setId] = useState(0);
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -42,6 +43,7 @@ const Update = () => {
         setIsLoading(true);
       });
   };
+
   return (
     <div>
       <h2 style={{ textAlign: "center" }}>Update User</h2>
@@ -50,44 +52,23 @@ const Update = () => {
         <form className="create-form">
           <div>
             <label>User Name</label> <br />
-            <input
-              className=""
-              type="text"
-              onChange={(e) => setName(e.target.value)}
-              value={name}
-            />
+            <input type="text" onChange={(e) => setName(e.target.value)} value={name}/>
           </div>
           <div>
             <label> Email address </label>
             <br />
-            <input
-              type="email"
-              onChange={(e) => setEmail(e.target.value)}
-              value={email}
-            />
+            <input type="email" onChange={(e) => setEmail(e.target.value)} value={email}/>
           </div>
           <div>
             <label> Mobile Number </label> <br />
-            <input
-              type="text"
-              onChange={(e) => setNumber(e.target.value)}
-              value={number}
-            />
+            <input type="text" onChange={(e) => setNumber(e.target.value)} value={number}/>
           </div>
           <div className="button">
             <Link to="/">
-              <button
-                onClick={handleUpdateClick}
-                type="submit"
-                className="btn btn-primary fs-4"
-              >
-                Submit
-              </button>
+              <button onClick={handleUpdateClick} type="submit" className="btn btn-primary fs-6">Submit</button>
             </Link>
             <Link to="/">
-              <button type="submit" className="btn btn-dark fs-4">
-                Back
-              </button>
+              <button type="submit" className="btn btn-dark fs-6">Back</button>
             </Link>
           </div>
         </form>

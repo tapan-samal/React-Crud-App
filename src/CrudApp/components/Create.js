@@ -1,10 +1,11 @@
 import axios from "axios";
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import defaultImg from "../../Assets/profile.jpeg";
-import loader from "../../Assets/loader.gif";
+import defaultImg from "../../assets/images/profile.jpeg";
+import loader from "../../assets/images/loader.gif";
 
 const Create = () => {
+
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [number, setNumber] = useState("");
@@ -13,15 +14,14 @@ const Create = () => {
   const [isLoading, setIsLoading] = useState(false);
   const history = useNavigate();
 
-  const handleUploadFile = (e)=> {
+  const handleUploadFile = (e) => {
     setSelectedFile(e.target.files[0]);
     setImageUrl(URL.createObjectURL(e.target.files[0]));
     console.log(e.target.files);
-  } 
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    
     // Validation for empty field
     if (!name || !email || !number) {
       alert("Please fill all the input fields !!");
@@ -34,7 +34,7 @@ const Create = () => {
         name: name,
         email: email,
         number: number,
-        file: selectedFile
+        file: selectedFile,
       })
       .then(() => {
         history("/");
@@ -49,9 +49,7 @@ const Create = () => {
   return (
     <>
       <h2 style={{ textAlign: "center" }}>Add User</h2>
-      {isLoading && (
-        <img src={loader} alt="profile" className="loader-gif" />
-      )}
+      {isLoading && <img src={loader} alt="profile" className="loader-gif" />}
       {!isLoading && (
         <form className="create-form">
           <div>
@@ -74,22 +72,19 @@ const Create = () => {
           </div>
           <div className="button">
             <Link to="/">
-              <button
-                onClick={handleSubmit}
-                type="submit"
-                className="btn btn-primary fs-4"
-              >
+              <button onClick={handleSubmit} type="submit" className="btn btn-primary fs-6">
                 Submit
               </button>
             </Link>
             <Link to="/">
-              <button type="submit" className="btn btn-dark fs-4">
+              <button type="submit" className="btn btn-dark fs-6">
                 Back
               </button>
             </Link>
           </div>
         </form>
-      )};
+      )}
+      ;
     </>
   );
 };

@@ -1,8 +1,8 @@
 import React from "react";
-import Display from "./components/Display";
-import Create from "./components/Create";
-import Update from "./components/Update";
 import { Route, Routes } from "react-router-dom";
+import Create from "./components/Create";
+import Display from "./components/Display";
+import Update from "./components/Update";
 
 const CrudApp = () => {
   return (
@@ -15,4 +15,3 @@ const CrudApp = () => {
 };
 
 export default CrudApp;
- 

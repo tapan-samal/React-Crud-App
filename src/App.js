@@ -1,10 +1,11 @@
 import React from "react";
-import "./App.css";
+import "./assets/css/main.css";
 import { BrowserRouter } from "react-router-dom";
-import CrudApp from "./CrudAppOne";
-import Logo from "./Assets/CommCoder.png";
+import CrudApp from "./CrudApp";
+import Logo from "./assets/images/CommCoder.png";
 
 const App = () => {
+  
   return (
     <>
       <div className="header">
